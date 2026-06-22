@@ -1,2 +1,172 @@
-Hi
-gergregeg4regg3
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Gallery Homepage</title>
+    <style>
+        /* Reset and Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f4f4f9;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header Navigation */
+        header {
+            background-color: #1a1a1a;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 5px;
+        }
+
+        /* Main Content Container */
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* Responsive Grid Structure */
+        .car-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        /* Car Card Component */
+        .car-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        .car-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Image Styling */
+        .car-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd; /* Fallback color */
+        }
+
+        /* Content Area inside Cards */
+        .car-info {
+            padding: 20px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .car-info h2 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: #222;
+        }
+
+        /* CSS-Controlled Redirection Buttons */
+        .btn-redirect {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #e50914; /* Crimson Red */
+            color: #fff;
+            padding: 12px 20px;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background-color 0.2s ease, box-shadow 0.2s ease;
+        }
+        .btn-redirect:hover {
+            background-color: #b20710;
+            box-shadow: 0 4px 10px rgba(178, 7, 16, 0.3);
+        }
+        .btn-redirect:active {
+            transform: scale(0.98);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1a1a1a;
+            color: #aaa;
+            margin-top: 60px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <h1>Supercar Showroom</h1>
+        <p>Explore world-class performance and luxury</p>
+    </header>
+
+    <!-- Main Gallery Section -->
+    <main class="container">
+        <section class="car-grid">
+            
+            <!-- Car 1 -->
+            <article class="car-card">
+                <img src="https://unsplash.com" alt="Red Porsche Sportscar" class="car-image">
+                <div class="car-info">
+                    <h2>Sports Models</h2>
+                    <a href="sports.html" class="btn-redirect">View Sports Cars</a>
+                </div>
+            </article>
+
+            <!-- Car 2 -->
+            <article class="car-card">
+                <img src="https://unsplash.com" alt="Luxury SUV" class="car-image">
+                <div class="car-info">
+                    <h2>Luxury SUVs</h2>
+                    <a href="suvs.html" class="btn-redirect">Explore SUVs</a>
+                </div>
+            </article>
+
+            <!-- Car 3 -->
+            <article class="car-card">
+                <img src="https://unsplash.com" alt="Electric Hypercar" class="car-image">
+                <div class="car-info">
+                    <h2>Electric Fleet</h2>
+                    <a href="electric.html" class="btn-redirect">Go Electric</a>
+                </div>
+            </article>
+
+            <!-- Car 4 -->
+            <article class="car-card">
+                <img src="https://unsplash.com" alt="Classic Vintage Car" class="car-image">
+                <div class="car-info">
+                    <h2>Vintage Classics</h2>
+                    <a href="classics.html" class="btn-redirect">Browse Classics</a>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2026 Car Showroom Concept. Images sourced from Unsplash.</p>
+    </footer>
+
+</body>
+</html>
+
